@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     color: #FFF;
+    font-family: 'inter', sans-serif;
 }
 .container{
     display: flex;
@@ -51,6 +54,8 @@
     width: 30%;
     position: relative;
     transition: all 0.7s;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
 }
 .Formulario > span{
     position: absolute;
@@ -63,7 +68,8 @@
     position: absolute;
     left: 10%;
     top: 10%;
-    padding: 10px;
+    padding: 15px;
+    margin: 15px;
 }
 .Formulario article h3{
     font-size: 2rem; 
@@ -78,7 +84,7 @@
     margin-right: 2rem;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 500px;
 }
 .Formulario article form input{
     margin-bottom: 1rem;
@@ -101,12 +107,39 @@
     padding: 10px;
     background-color: #2B2D42;
     cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.4s;
 }
 .Formulario article form button:hover{
     background: #00B4DB;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    scale: 1.2;
+    scale: 1.1;
+
+}
+.IconList{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    color: #fff;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+.IconList li {
+    margin-left: 10%;
+    list-style: none;
+    cursor: pointer;
+}
+.IconList li i{
+    width: 45px;
+    height: 45px;
+    font-size: 2.5rem; 
+}
+.account{
+    cursor: pointer;
+    list-style:outside;
 }
 
 @media (width < 1200px){
@@ -119,7 +152,7 @@
     }
     .Banner{
         display: flex;
-        height: 90vh;
+        height: 100vh;
         width: 50%;
         position: relative;
     }
@@ -133,8 +166,10 @@
     }
     .Formulario{
         background-color: #040824;
-        height: 90vh;
+        height: 100vh;
         width: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
     .Formulario article{
         position: absolute;
@@ -143,7 +178,7 @@
         padding: 10px;   
     }
 }
-@media (width < 600px){
+@media (width < 720px){
     .Banner{
         display: none;
         transition: all 0.4s;
@@ -157,5 +192,11 @@
         align-items: center;
         justify-content: center;
         
-    }  
+    }
+    .Formulario article h3{
+        font-size: 1.3rem; 
+    }
+    .Formulario article p{
+        font-size: 0.8rem; 
+    }
 }
