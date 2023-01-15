@@ -37,12 +37,12 @@
 }
 .Banner > span > span h1{
     font-size: 2rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     color: #FFF;
     box-shadow: 1px;
 }
 .Banner > span > span p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     flex-wrap: wrap;
     color: #FFF;
     box-shadow: 1px;
@@ -125,7 +125,9 @@
     color: #fff;
     padding: 10px;
     margin-top: 5px;
-
+    
+    align-items: center;
+    justify-content: center;
 }
 .IconList li {
     margin-left: 10%;
@@ -133,16 +135,18 @@
     cursor: pointer;
 }
 .IconList li i{
-    width: 45px;
-    height: 45px;
-    font-size: 2.5rem; 
+    max-width: 45px;;
+    max-height: 25px;
+    font-size: 1.6rem; 
+    
 }
 .account{
     cursor: pointer;
     list-style:outside;
+    text-align: center;
 }
 
-@media (width < 1200px){
+@media (width < 1400px){
     .container{
         display: flex;
         height: 100%;
